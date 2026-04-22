@@ -16,8 +16,6 @@ public class NewBehaviourScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("THIS OBJECT: " + gameObject.name);
-        Debug.Log("GAMEOVER REF: " + _gameOverObject);
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.SetActive(false);

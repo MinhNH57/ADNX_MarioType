@@ -1,9 +1,10 @@
+using Spine.Unity;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using Spine.Unity;
-using System;
+using static UnityEngine.EventSystems.EventTrigger;
 public enum PlayerState {Idle , Move , Jump , Falling}
 
 public class Playercontroller : MonoBehaviour
@@ -19,6 +20,7 @@ public class Playercontroller : MonoBehaviour
     public Transform groundCheck;
     private int maxJump = 2;
     private int jumpCount = 0;
+
     private void Update()
     {
         Move();
@@ -70,8 +72,19 @@ public class Playercontroller : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Debug.Log("Đã chạm đất");
             IsGround = true;
+        }
+
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            foreach (ContactPoint2D point in collision.contacts)
+            {
+                if (point.normal.y == 1f)
+                {
+                    EnemyMove.Instance.EnemyDie();
+                    return;
+                }
+            }
         }
     }
 
@@ -79,7 +92,6 @@ public class Playercontroller : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Debug.Log("Đang bay");
             IsGround = false;
         }
     }
