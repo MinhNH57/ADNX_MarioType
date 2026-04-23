@@ -11,10 +11,12 @@ public class AudioManager : MonoBehaviour
     public AudioClip musicClip;
     public AudioClip coinClip;
     public AudioClip winClip;
+    public AudioClip failClip;  
 
     private void Start()
     {
         musicAudioSource.clip = musicClip;
+        musicAudioSource.loop = true;
         musicAudioSource.Play();
     }
 
