@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class CollectPlayer : MonoBehaviour
 {
+    public AudioManager _audioManager;
     public int value = 1;
-
     public float moveUpSpeed = 2f;
     public float lifeTime = 0.5f;
-
     private bool isCollected = false;
     private float timer = 0f;
     private SpriteRenderer sr;
 
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -39,6 +42,7 @@ public class CollectPlayer : MonoBehaviour
         if (!collision.CompareTag("Player")) return;
 
         if (GameManager.Instance != null)
+            _audioManager.PlaySfx(_audioManager.coinClip);
             GameManager.Instance.AddCoin(value);
 
         isCollected = true;
