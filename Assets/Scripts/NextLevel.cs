@@ -5,14 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
+    public AudioManager _audioManager;
     public string _nextScene;
+
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>(); 
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject);
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(_nextScene);
+            _audioManager.PlaySfx(_audioManager.winClip);
+            StartCoroutine(LoadNextScene());
         }
+    }
+    IEnumerator LoadNextScene()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(_nextScene);
     }
 }
