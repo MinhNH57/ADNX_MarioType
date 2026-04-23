@@ -2280,6 +2280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f7a05506731440be481cec7fdf705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioManager: {fileID: 0}
   _gameOverObject: {fileID: 109707621}
 --- !u!1001 &1435710736
 PrefabInstance:
@@ -2293,6 +2294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3462215617567812033, guid: 25931f14281440e478090aeabcada2c0, type: 3}
+      propertyPath: failClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b99a6ec08f913545a78b013c82ebdbd, type: 3}
     - target: {fileID: 8215633991862900749, guid: 25931f14281440e478090aeabcada2c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.803423

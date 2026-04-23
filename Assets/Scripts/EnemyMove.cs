@@ -4,7 +4,7 @@ public class EnemyMove : MonoBehaviour
 {
     public static EnemyMove Instance;
     public float speed = 2f;
-    public float distance = 3f;
+    public float distance = 4f;
 
     private float startX;
     private int direction = 1;

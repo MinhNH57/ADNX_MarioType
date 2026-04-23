@@ -45,6 +45,10 @@ public class Playercontroller : MonoBehaviour
     private void Move()
     {
         var moveHorizontal = Input.GetAxis("Horizontal");
+        if (Mathf.Abs(moveHorizontal) < 0.1f)
+        {
+            moveHorizontal = 0;
+        }
 
         if (moveHorizontal < 0)
         {
@@ -66,6 +70,7 @@ public class Playercontroller : MonoBehaviour
             _rd.velocity = new Vector3(moveHorizontal * speed, _rd.velocity.y);
         }
         amin.SetFloat("IsRun", Mathf.Abs(moveHorizontal));
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -75,7 +80,7 @@ public class Playercontroller : MonoBehaviour
             IsGround = true;
         }
 
-        if(collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             foreach (ContactPoint2D point in collision.contacts)
             {
