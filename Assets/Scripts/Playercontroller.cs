@@ -9,6 +9,8 @@ public enum PlayerState {Idle , Move , Jump , Falling}
 
 public class Playercontroller : MonoBehaviour
 {
+    public AudioManager _audioManager;
+    public GameObject _gameOverObject;
     private float speed = 5f;
     private float jumForce = 5f;
     public Rigidbody2D _rd;
@@ -20,11 +22,22 @@ public class Playercontroller : MonoBehaviour
     public Transform groundCheck;
     private int maxJump = 2;
     private int jumpCount = 0;
+    public float offsetDeath = -6f;
+    private Camera cam;
 
+    private void Start()
+    {
+        cam = Camera.main;
+    }
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     private void Update()
     {
         Move();
         Jump();
+        CheckFallDeath();
     }
 
     private void Jump()
@@ -99,5 +112,20 @@ public class Playercontroller : MonoBehaviour
         {
             IsGround = false;
         }
+    }
+    private void CheckFallDeath()
+    {
+        if (model.position.y < cam.transform.position.y + offsetDeath)
+        {
+            Debug.Log("Chet toi roi");
+            _audioManager.PlaySfx(_audioManager.failClip);
+            StartCoroutine(LoadFail());
+            gameObject.SetActive(false);
+            _gameOverObject.SetActive(true);    
+        }
+    }
+    IEnumerator LoadFail()
+    {
+        yield return new WaitForSeconds(1f);
     }
 }

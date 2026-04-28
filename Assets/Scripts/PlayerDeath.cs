@@ -15,11 +15,18 @@ public class PlayerDeath : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             _audioManager.PlaySfx(_audioManager.failClip);
+
+            int finalScore = GameManager.Instance.coinCount;
+            Debug.Log(finalScore);
+            GameManager.Instance.UpdateHighScore(finalScore);
+
             StartCoroutine(LoadFail());
+
             collision.gameObject.SetActive(false);
+
             _gameOverObject.SetActive(true);
         }
     }
