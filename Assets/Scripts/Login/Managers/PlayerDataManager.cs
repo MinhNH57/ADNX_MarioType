@@ -77,4 +77,11 @@ public class PlayerDataManager : MonoBehaviour
             data.players = new List<PlayerData>();
         }
     }
+
+    public List<PlayerData> GetLeaderboard()
+    {
+        return data.players
+            .OrderByDescending(p => p.highScore)
+            .ToList();
+    }
 }

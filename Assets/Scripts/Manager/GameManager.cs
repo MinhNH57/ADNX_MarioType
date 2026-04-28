@@ -55,7 +55,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    // ❗ Không giữ object trực tiếp nữa
     public string currentPlayerId;
 
     public int coinCount = 0;
@@ -73,8 +72,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    // ✅ Set player đúng cách (gọi khi login / start game)
     public void SetCurrentPlayer(string playerName)
     {
         var player = PlayerDataManager.Instance.AddOrGetPlayer(playerName);
@@ -83,7 +80,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("🎯 Current Player: " + player.playerName + " | ID: " + player.id);
     }
 
-    // ✅ Lấy player chuẩn từ data (KHÔNG bao giờ lệch)
     private PlayerData GetCurrentPlayer()
     {
         if (string.IsNullOrEmpty(currentPlayerId))

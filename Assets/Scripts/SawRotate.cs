@@ -76,12 +76,11 @@ public class SawRotate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isTriggered) return; // ❗ tránh gọi nhiều lần
+        if (isTriggered) return;
         if (!collision.CompareTag("Player")) return;
 
         isTriggered = true;
 
-        // 🔊 Play sound
         if (_audioManager != null)
         {
             _audioManager.PlaySfx(_audioManager.failClip);
@@ -90,7 +89,6 @@ public class SawRotate : MonoBehaviour
         int finalScore = GameManager.Instance.coinCount;
         Debug.Log("💀 Player chết | Score: " + finalScore);
 
-        // ❗ Check player trước khi update
         if (GameManager.Instance != null)
         {
             GameManager.Instance.UpdateHighScore(finalScore);
@@ -100,10 +98,8 @@ public class SawRotate : MonoBehaviour
             Debug.LogError("❌ GameManager NULL");
         }
 
-        // ❗ disable player
         collision.gameObject.SetActive(false);
 
-        // ❗ hiện game over UI
         if (_gameOverObject != null)
         {
             _gameOverObject.SetActive(true);

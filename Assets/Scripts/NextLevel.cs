@@ -24,6 +24,7 @@ public class NextLevel : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         yield return new WaitForSeconds(1.5f);
+        GameManager.Instance.UpdateHighScore(GameManager.Instance.coinCount);
         SceneManager.LoadScene(_nextScene);
     }
 }

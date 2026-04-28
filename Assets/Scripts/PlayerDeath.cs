@@ -20,7 +20,6 @@ public class PlayerDeath : MonoBehaviour
             _audioManager.PlaySfx(_audioManager.failClip);
 
             int finalScore = GameManager.Instance.coinCount;
-            Debug.Log(finalScore);
             GameManager.Instance.UpdateHighScore(finalScore);
 
             StartCoroutine(LoadFail());
