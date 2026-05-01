@@ -51,6 +51,10 @@ public class Playercontroller : MonoBehaviour
             _rd.velocity = new Vector2(_rd.velocity.x, 0);
             _rd.AddForce(Vector2.up * jumForce, ForceMode2D.Impulse);
             jumpCount++;
+            if (jumpCount == 2)
+            {
+                amin.Play("DoubleJump");
+            }
         }
         amin.SetFloat("IsJump", Mathf.Abs(_rd.velocity.y));
         amin.SetBool("IsDoubleJump", jumpCount == maxJump);
@@ -91,6 +95,7 @@ public class Playercontroller : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             IsGround = true;
+            Debug.Log("==== ALO! ĐÃ CHẠM ĐẤT RỒI NHÉ ====");
         }
 
         if (collision.gameObject.CompareTag("Enemy"))

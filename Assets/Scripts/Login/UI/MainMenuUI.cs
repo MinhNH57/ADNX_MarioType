@@ -44,6 +44,6 @@ public class MainMenuUI : MonoBehaviour
         PlayerDataManager.Instance.AddOrGetPlayer(playerName);
 
         GameManager.Instance.SetCurrentPlayer(playerName);
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("ChonNhanVat");
     }
 }

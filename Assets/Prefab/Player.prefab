@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4939966960291082838}
   - component: {fileID: 2771372897742389876}
   - component: {fileID: 2333472677070220561}
+  - component: {fileID: 5440289372964598227}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -201,6 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949dd35a02debf640ab33b509e87c390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioManager: {fileID: 0}
+  _gameOverObject: {fileID: 0}
   _rd: {fileID: 4154566489214449478}
   model: {fileID: 5993377380994469544}
   amin: {fileID: 7620986376824181029}
@@ -209,6 +212,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   groundCheck: {fileID: 0}
+  offsetDeath: -6
+--- !u!114 &5440289372964598227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134362751004284354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da42249072b6624cae3122228ab4282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetAnimator: {fileID: 7620986376824181029}
+  characterAnimators:
+  - {fileID: 9100000, guid: 4e2288680c8921b4495f1794c0020776, type: 2}
+  - {fileID: 9100000, guid: c834faeb307c9764393c46ad7d429d0c, type: 2}
 --- !u!1 &5765355748787197911
 GameObject:
   m_ObjectHideFlags: 0
