@@ -121,8 +121,6 @@ public class GameManager : MonoBehaviour
         {
             player.highScore = newScore;
 
-            Debug.Log("✅ Updated Score: " + player.highScore);
-
             PlayerDataManager.Instance.SaveData();
         }
         else
