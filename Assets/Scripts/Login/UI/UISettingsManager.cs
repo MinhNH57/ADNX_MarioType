@@ -8,10 +8,8 @@ public class UISettingsManager : MonoBehaviour
     //{
     //    settingPanel.SetActive(true);
     //}
-
     public void OpenSetting()
     {
-        Debug.Log("settingPanel is: " + settingPanel);
         if (settingPanel == null)
         {
             // Thử tìm lại
