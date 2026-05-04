@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    public static EnemyMove Instance;
+    //public static EnemyMove Instance;
     public float speed = 2f;
     public float distance = 4f;
 
     private float startX;
     private int direction = 1;
 
-    void Awake()
-    {
-        Instance = this;
-    }
+    //void Awake()
+    //{
+    //    Instance = this;
+    //}
     void Start()
     {
         startX = transform.position.x;
@@ -44,6 +44,7 @@ public class EnemyMove : MonoBehaviour
     {
         GetComponent<Collider2D>().enabled = false;
         transform.localScale = new Vector3(1, 0.3f, 1);
+        GameManager.Instance.AddCoin(3);
         Destroy(gameObject, 0.2f);
     }
 }

@@ -104,7 +104,12 @@ public class Playercontroller : MonoBehaviour
             {
                 if (point.normal.y == 1f)
                 {
-                    EnemyMove.Instance.EnemyDie();
+                    EnemyMove enemy = collision.gameObject.GetComponent<EnemyMove>();
+
+                    if (enemy != null)
+                    {
+                        enemy.EnemyDie();
+                    }
                     return;
                 }
             }
