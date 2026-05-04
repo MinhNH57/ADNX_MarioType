@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2771372897742389876}
   - component: {fileID: 2333472677070220561}
   - component: {fileID: 5440289372964598227}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 5993377380994469544}
   - component: {fileID: 183135107096057537}
   - component: {fileID: 7620986376824181029}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
