@@ -5407,6 +5407,10 @@ PrefabInstance:
       propertyPath: failClip
       value: 
       objectReference: {fileID: 8300000, guid: 1b99a6ec08f913545a78b013c82ebdbd, type: 3}
+    - target: {fileID: 3462215617567812033, guid: 25931f14281440e478090aeabcada2c0, type: 3}
+      propertyPath: breakClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b99a6ec08f913545a78b013c82ebdbd, type: 3}
     - target: {fileID: 8215633991862900749, guid: 25931f14281440e478090aeabcada2c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.803423

@@ -11,7 +11,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip musicClip;
     public AudioClip coinClip;
     public AudioClip winClip;
-    public AudioClip failClip;  
+    public AudioClip failClip;
+    public AudioClip breakClip;
 
     private void Start()
     {

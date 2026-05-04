@@ -541,8 +541,8 @@ MonoBehaviour:
   - {x: 0.5, y: 0.5, z: 0}
   - {x: 0.5, y: -0.5, z: 0}
   m_ShapePathHash: 160822549
-  m_Mesh: {fileID: 1951833428}
-  m_InstanceId: 78110
+  m_Mesh: {fileID: 1963816868}
+  m_InstanceId: 119330
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 0.5, z: 0}
@@ -5480,7 +5480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be6bf1c79bf89745b6c4be2afa00761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!43 &1951833428
+--- !u!43 &1963816868
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7245,6 +7245,10 @@ PrefabInstance:
       propertyPath: failClip
       value: 
       objectReference: {fileID: 8300000, guid: 1b99a6ec08f913545a78b013c82ebdbd, type: 3}
+    - target: {fileID: 3462215617567812033, guid: 25931f14281440e478090aeabcada2c0, type: 3}
+      propertyPath: breakClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a2f6670f8fc4e474cbf92f70114fea07, type: 3}
     - target: {fileID: 8215633991862900749, guid: 25931f14281440e478090aeabcada2c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.803423

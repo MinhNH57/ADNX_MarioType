@@ -4,8 +4,12 @@ using static UnityEngine.Rendering.DebugUI;
 public class BrickHitEffect : MonoBehaviour
 {
     public GameObject hitParticlePrefab;
+    public AudioManager _audioManager;
 
-
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!collision.gameObject.CompareTag("Player")) return;
@@ -13,8 +17,8 @@ public class BrickHitEffect : MonoBehaviour
         {
             if (contact.normal.y > 0.5f)
             {
-                Debug.Log("Da cham roi nhe");
                 TriggerEffect(contact.point);
+                _audioManager.PlaySfx(_audioManager.breakClip);
                 break;
             }
         }
