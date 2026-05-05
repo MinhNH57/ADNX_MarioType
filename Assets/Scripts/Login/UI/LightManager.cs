@@ -18,6 +18,7 @@ public class LightManager : MonoBehaviour
         if (light == null) return;
         if (!lights.Contains(light))
         {
+            Debug.Log("Đèn đăngt ký " + light.name);
             lights.Add(light);
             ApplyToLight(light);
         }

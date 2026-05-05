@@ -1,0 +1,818 @@
+fileFormatVersion: 2
+guid: 68c753fe5dd257b4c958593f5a7dad2d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 134
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RunMArioPng_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7541610f2719e5d4092e4d7c3bccdd2a
+      internalID: 691301602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_1
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2814d05553cabf04bad9c28858f19d24
+      internalID: -1601552979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_2
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1dade95a5134554f85b4317f1aa4ff5
+      internalID: -240362825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_3
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d42e38592063494e944a83586b1a370
+      internalID: -1486541353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_4
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8999913c5b703364c9cb674a6731c08a
+      internalID: 1747193031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_5
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47ea423720be9e449792b6553a1b65e
+      internalID: -1010291723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_6
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790e9aa5ca4a50944aea3542928e5b18
+      internalID: -143316902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_7
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677a125306106184194c918675dfa5bf
+      internalID: 465103484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25226d46badd9a843916359b6ad59582
+      internalID: 165925792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_9
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faca4421cead1604d97f8e4a3a8f4fa7
+      internalID: 1787265637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_10
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8280a54a7fa37374e840b02b9956d0a5
+      internalID: 1951906496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_11
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11f023954c03444fb1326df427a4b0d
+      internalID: 1038545696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_12
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb466176073093a43a56fcc2f3194a88
+      internalID: -134754997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_13
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d404a96adf41641b2bdc57b1906676
+      internalID: -568364548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_14
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee89acf99a3df146b082eb5e85857c2
+      internalID: 2055132659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_15
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9901d2abb5e3b5b45b48e2a05e78248b
+      internalID: 1527311346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04ef74dbc8db4d449c4279cb4119a91
+      internalID: 677933063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_17
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fdd458faca5cb049a79b0e53990d198
+      internalID: 1217881932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_18
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df8946c0ff39a046906a6c54f738bb0
+      internalID: -138163660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_19
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd36a1d891325240a04acf1946c6e00
+      internalID: 1902379896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_20
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0bdf473c4192e468c3e4dbe3e302cf
+      internalID: 585877601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_21
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08df805d7cd89574abe428569f9edaef
+      internalID: 891059796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_22
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9cb79feef02a641bb2ce12648e1373
+      internalID: 442832173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_23
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90088dcd27a227848a7117f1c9c9a57f
+      internalID: 1626442571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e044a53e7efb6a4798768fe966a2c46
+      internalID: 606598557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_25
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55eaa3762583b94a9d72f0c4d981c25
+      internalID: -1348416910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_26
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978ba940ee840d44eb12469307bd5edb
+      internalID: -1951423283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_27
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1248159691b3544888863fc32aaefa
+      internalID: 1081038304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_28
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e873e40c54c634ba504b4b193a90d6
+      internalID: -1960456887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_29
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6bb71b79cd74f4695c53f3726cfad5
+      internalID: 2064319027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_30
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71baefea962259f42b9bcf6b35e519ff
+      internalID: -1248322533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunMArioPng_31
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c6bb074cc7f3849b186bb517bc0511
+      internalID: -1411165811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RunMArioPng_0: 691301602
+      RunMArioPng_1: -1601552979
+      RunMArioPng_10: 1951906496
+      RunMArioPng_11: 1038545696
+      RunMArioPng_12: -134754997
+      RunMArioPng_13: -568364548
+      RunMArioPng_14: 2055132659
+      RunMArioPng_15: 1527311346
+      RunMArioPng_16: 677933063
+      RunMArioPng_17: 1217881932
+      RunMArioPng_18: -138163660
+      RunMArioPng_19: 1902379896
+      RunMArioPng_2: -240362825
+      RunMArioPng_20: 585877601
+      RunMArioPng_21: 891059796
+      RunMArioPng_22: 442832173
+      RunMArioPng_23: 1626442571
+      RunMArioPng_24: 606598557
+      RunMArioPng_25: -1348416910
+      RunMArioPng_26: -1951423283
+      RunMArioPng_27: 1081038304
+      RunMArioPng_28: -1960456887
+      RunMArioPng_29: 2064319027
+      RunMArioPng_3: -1486541353
+      RunMArioPng_30: -1248322533
+      RunMArioPng_31: -1411165811
+      RunMArioPng_4: 1747193031
+      RunMArioPng_5: -1010291723
+      RunMArioPng_6: -143316902
+      RunMArioPng_7: 465103484
+      RunMArioPng_8: 165925792
+      RunMArioPng_9: 1787265637
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

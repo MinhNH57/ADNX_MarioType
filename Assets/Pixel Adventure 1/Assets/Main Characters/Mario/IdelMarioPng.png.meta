@@ -1,0 +1,818 @@
+fileFormatVersion: 2
+guid: e8944adb9afec1a468f51c2cc192f880
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 134
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IdelMarioPng_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a63da099de270f42b0c2910f36feee9
+      internalID: -333580201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_1
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0a83c8becb60a47a9a45291b392dc4
+      internalID: 1915518613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_2
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef5497d2e897b248b7978d727fbfd6c
+      internalID: 875268099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_3
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559805d0478402c49a4bd6e89e44c9dd
+      internalID: -733361599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_4
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63d1e7e3aeaea04cbd78bd1f666129a
+      internalID: -2026310068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_5
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6869e88dff52741b78dc2153cd934d
+      internalID: -1055823520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_6
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7939df819af06864e8caf8eae2d9f133
+      internalID: 792390442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_7
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25136be7207bf64fa89ae6216db2ab3
+      internalID: 357189242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b2c5371e463e04c8f93d64df3fca7e
+      internalID: -2133522264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_9
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5b7ad46ea0977449aa1e85f4df6ce2
+      internalID: -1141563954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_10
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7aa24308fc728b4a99db73bcddabb29
+      internalID: -2054241583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_11
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265c0aca2fd744a47b292a6167f683d9
+      internalID: -777821275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_12
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9edccb4dceb65cb46a070c402620e4c1
+      internalID: -617464699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_13
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ec71ecf84ac7749b9fcd5600062a26
+      internalID: -523670520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_14
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f1c889f53d0204e828046d653e9f01
+      internalID: -1006040785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_15
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3087a68690472d447a709a5475e2e05d
+      internalID: 938669930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9860972b330eb149bec90d55a165aec
+      internalID: 1946587653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_17
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c7758ba5b576941aac265e3d9e1016
+      internalID: -441275282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_18
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1953dcbb4a63c64c9b08b80c11a6903
+      internalID: -2039091943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_19
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e6c8a7bc758a24cb2f45749010b31d
+      internalID: -36053212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_20
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38dd0d4765a7fb46a9af4dd7f76ee31
+      internalID: 331157745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_21
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa8b4610d1b8c449b699dba8a098d32
+      internalID: -1316695693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_22
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdaebe81cab28814dae3797234ac0ac4
+      internalID: -897320571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_23
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b166dada2229146b759d2f512d6675
+      internalID: 415175644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7714ee908d8474d99f9285141ec932
+      internalID: -123460753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_25
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1077528001095d641a76544dcdda6fdc
+      internalID: -1078490332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_26
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd2b17f990f76bc4b871d5760585adb2
+      internalID: 1715898817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_27
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792edd04d89e6204cada80590bebe59b
+      internalID: -748701334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_28
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad49dd79cbdb29e4b81cec9120151e16
+      internalID: -1223854021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_29
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30090945a3ee8a4baf98ffe6f250a1e
+      internalID: -1250556659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_30
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64ff8e329515cf4cb2dced7bf6b1317
+      internalID: -1228167940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdelMarioPng_31
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a195f2fa9d589640b9cf9b777e995ff
+      internalID: 7508263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      IdelMarioPng_0: -333580201
+      IdelMarioPng_1: 1915518613
+      IdelMarioPng_10: -2054241583
+      IdelMarioPng_11: -777821275
+      IdelMarioPng_12: -617464699
+      IdelMarioPng_13: -523670520
+      IdelMarioPng_14: -1006040785
+      IdelMarioPng_15: 938669930
+      IdelMarioPng_16: 1946587653
+      IdelMarioPng_17: -441275282
+      IdelMarioPng_18: -2039091943
+      IdelMarioPng_19: -36053212
+      IdelMarioPng_2: 875268099
+      IdelMarioPng_20: 331157745
+      IdelMarioPng_21: -1316695693
+      IdelMarioPng_22: -897320571
+      IdelMarioPng_23: 415175644
+      IdelMarioPng_24: -123460753
+      IdelMarioPng_25: -1078490332
+      IdelMarioPng_26: 1715898817
+      IdelMarioPng_27: -748701334
+      IdelMarioPng_28: -1223854021
+      IdelMarioPng_29: -1250556659
+      IdelMarioPng_3: -733361599
+      IdelMarioPng_30: -1228167940
+      IdelMarioPng_31: 7508263
+      IdelMarioPng_4: -2026310068
+      IdelMarioPng_5: -1055823520
+      IdelMarioPng_6: 792390442
+      IdelMarioPng_7: 357189242
+      IdelMarioPng_8: -2133522264
+      IdelMarioPng_9: -1141563954
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

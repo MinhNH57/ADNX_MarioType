@@ -1,0 +1,818 @@
+fileFormatVersion: 2
+guid: 27f4b374479df3e42ae8889558d96ec7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 134
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JumpMarioPng_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c21cfef7e100a4ea3fc7fbfee3eb3f
+      internalID: 1218330893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_1
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4f82da14d2eaf4593f227eaeddc21c
+      internalID: -38618079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_2
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f40f73c51fa86a4ca5149cd70d683b0
+      internalID: 11657440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_3
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eabdaa16c9566845b8f036c36066842
+      internalID: -1520583941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_4
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b5f69df11ab6f49b8bbbfa49a5e63b
+      internalID: -1547751987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_5
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1329da1870bc843a7fe9fd91e09b43
+      internalID: -259500563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_6
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e02ac1d19e95643bcc62c5e083e46f
+      internalID: 364349361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_7
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 399
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9615171fdf309754badb2dfc271a6277
+      internalID: -91773259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c727664b3c9fd994087427d4eb2b0fe4
+      internalID: -1974137767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_9
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5fe7ce9a65241478819cdd0c0f59cf
+      internalID: -333676482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_10
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1331c7cf9a73f3245b116a0cdbe5d084
+      internalID: -2065157888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_11
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d5ca0ecbb2738409385f1888cfa75b
+      internalID: 838388509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_12
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e814ad286392e3d4bae0ba5fd2b75d98
+      internalID: 1647854594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_13
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce305020185fb144a877f574510f0db
+      internalID: -660288436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_14
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8aa2010fc562354b81995b0c0f77557
+      internalID: 464121334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_15
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 266
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6640d8f707c5a1440883d3e9a223761f
+      internalID: 320662948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdc9abe0c3015b4e8b316cd7b046b99
+      internalID: -1376171853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_17
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511f5479ee0c4cf4a9009bd9ef7ae7ef
+      internalID: 1143282731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_18
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8c2136fdabd2c49bb565bbbd622bb1
+      internalID: -84821913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_19
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6d81d1a49b87c43bac56a2911d517c
+      internalID: 722064583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_20
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8265ecaf28a9f42a00f38a3bdde030
+      internalID: -175590424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_21
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef56851254870049b993f8e20fda42e
+      internalID: -618892565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_22
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a190100dfd923ff4ea6472f646a94cb4
+      internalID: 1161328831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_23
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 133
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88da37042dc5f594798f6acf82d88631
+      internalID: 1631597961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df840295b775fd42806c2e1dedb31ae
+      internalID: 1616394974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_25
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f40c4aacce1c2142890e4059bc24704
+      internalID: -617361225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_26
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead89a8cdb92f2940a69ce416aab46e3
+      internalID: -157750747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_27
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e0f6819e1e37040a7acc1e4ad19d5d
+      internalID: -826372478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_28
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a582eb858781ea048872d880f3569cb3
+      internalID: -1714778275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_29
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 008ae7a0785718c449a3a146a8052b24
+      internalID: -1356447351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_30
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630ce964cf30deb4ab84e9ba16faa65f
+      internalID: 902458881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpMarioPng_31
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 0
+        width: 121.875
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045c1169ad95a1f468eeed69d83d469f
+      internalID: 103351497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      JumpMarioPng_0: 1218330893
+      JumpMarioPng_1: -38618079
+      JumpMarioPng_10: -2065157888
+      JumpMarioPng_11: 838388509
+      JumpMarioPng_12: 1647854594
+      JumpMarioPng_13: -660288436
+      JumpMarioPng_14: 464121334
+      JumpMarioPng_15: 320662948
+      JumpMarioPng_16: -1376171853
+      JumpMarioPng_17: 1143282731
+      JumpMarioPng_18: -84821913
+      JumpMarioPng_19: 722064583
+      JumpMarioPng_2: 11657440
+      JumpMarioPng_20: -175590424
+      JumpMarioPng_21: -618892565
+      JumpMarioPng_22: 1161328831
+      JumpMarioPng_23: 1631597961
+      JumpMarioPng_24: 1616394974
+      JumpMarioPng_25: -617361225
+      JumpMarioPng_26: -157750747
+      JumpMarioPng_27: -826372478
+      JumpMarioPng_28: -1714778275
+      JumpMarioPng_29: -1356447351
+      JumpMarioPng_3: -1520583941
+      JumpMarioPng_30: 902458881
+      JumpMarioPng_31: 103351497
+      JumpMarioPng_4: -1547751987
+      JumpMarioPng_5: -259500563
+      JumpMarioPng_6: 364349361
+      JumpMarioPng_7: -91773259
+      JumpMarioPng_8: -1974137767
+      JumpMarioPng_9: -333676482
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

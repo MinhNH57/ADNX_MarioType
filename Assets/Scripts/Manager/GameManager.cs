@@ -76,8 +76,6 @@ public class GameManager : MonoBehaviour
     {
         var player = PlayerDataManager.Instance.AddOrGetPlayer(playerName);
         currentPlayerId = player.id;
-
-        Debug.Log("🎯 Current Player: " + player.playerName + " | ID: " + player.id);
     }
 
     private PlayerData GetCurrentPlayer()
