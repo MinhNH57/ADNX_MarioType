@@ -63,8 +63,10 @@ public class SettingUI : MonoBehaviour
     private void Start()
     {
         bool isOn = PlayerPrefs.GetInt("SOUND", 1) == 1;
+        bool isLightOn = LightManager.Instance.isLightOn;
 
         toggleSounds.isOn = isOn;
+        toggleLight.isOn = isLightOn;
         AudioListener.pause = !isOn;
 
         toggleSounds.onValueChanged.AddListener(OnToggleChangedSound);
