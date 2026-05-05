@@ -12,9 +12,9 @@ public class UISettingsManager : MonoBehaviour
     {
         if (settingPanel == null)
         {
-            // Thử tìm lại
             settingPanel = transform.Find("SettingPanel")?.gameObject;
         }
+        Debug.Log(transform.Find("SettingPanel"));
         settingPanel.SetActive(true);
     }
 
