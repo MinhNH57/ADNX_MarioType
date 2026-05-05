@@ -14,10 +14,15 @@ public class SettingUI : MonoBehaviour
     //    }
     //    LightManager.Instance.SetLight(value);
     //}
+    public static SettingUI Instances;
     [SerializeField] private Toggle toggleLight;
     [SerializeField] private Toggle toggleSounds;
+    public bool? IsOnSound;
 
-
+    private void Awake()
+    {
+        Instances = GetComponent<SettingUI>();  
+    }
     public void OnToggleChanged(bool value)
     {
         if (LightManager.Instance == null) return;
@@ -28,6 +33,14 @@ public class SettingUI : MonoBehaviour
     public void OnToggleChangedSound(bool value)
     {
         value = toggleSounds.isOn;
-        Debug.Log("Sounds :" + value.ToString());
+        IsOnSound = value;
+        if(value)
+        {
+            AudioListener.pause = false;
+        }
+        else
+        {
+            AudioListener.pause = true;
+        }
     }
 }

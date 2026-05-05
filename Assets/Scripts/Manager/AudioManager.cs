@@ -16,6 +16,14 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        //if (SettingUI.Instances.IsOnSound ?? false)
+        //{
+        //    AudioListener.pause = false;
+        //}
+        //else
+        //{
+        //    AudioListener.pause = true;
+        //}
         musicAudioSource.clip = musicClip;
         musicAudioSource.loop = true;
         musicAudioSource.Play();
@@ -23,6 +31,14 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySfx(AudioClip sfxClip)
     {
+        //if (SettingUI.Instances.IsOnSound ?? false)
+        //{
+        //    AudioListener.pause = false;
+        //}
+        //else
+        //{
+        //    AudioListener.pause = true;
+        //}
         vfxAudioSource.clip = sfxClip;
         vfxAudioSource.PlayOneShot(sfxClip);
     }
