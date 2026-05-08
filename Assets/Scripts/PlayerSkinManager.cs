@@ -1,6 +1,8 @@
+using Unity.Netcode;
 using UnityEngine;
 
-public class PlayerSkinManager : MonoBehaviour
+// Đổi từ MonoBehaviour sang NetworkBehaviour
+public class PlayerSkinManager : NetworkBehaviour
 {
     [Header("Nơi chứa Animator của nhân vật")]
     public Animator targetAnimator;
@@ -8,17 +10,34 @@ public class PlayerSkinManager : MonoBehaviour
     [Header("Danh sách Bộ Animation (Animator Controller)")]
     public RuntimeAnimatorController[] characterAnimators;
 
-    private void Start()
-    {
-        int selectedIndex = PlayerPrefs.GetInt("SelectedCharacter", 0);
+    private NetworkVariable<int> selectedSkinIndex = new NetworkVariable<int>(0,
+        NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
-        if (targetAnimator != null && selectedIndex < characterAnimators.Length)
+    public override void OnNetworkSpawn()
+    {
+        selectedSkinIndex.OnValueChanged += (oldValue, newValue) =>
         {
-            targetAnimator.runtimeAnimatorController = characterAnimators[selectedIndex];
+            ApplyAnimator(newValue);
+        };
+        if (IsOwner)
+        {
+            int myLocalIndex = PlayerPrefs.GetInt("SelectedCharacter", 0);
+            selectedSkinIndex.Value = myLocalIndex;
+
+            ApplyAnimator(myLocalIndex);
         }
         else
         {
-            Debug.LogWarning("Lỗi: Bạn chưa gán Target Animator hoặc mảng Animators bị thiếu!");
+            ApplyAnimator(selectedSkinIndex.Value);
+        }
+    }
+
+    private void ApplyAnimator(int index)
+    {
+        if (targetAnimator != null && index >= 0 && index < characterAnimators.Length)
+        {
+            targetAnimator.runtimeAnimatorController = characterAnimators[index];
+            Debug.Log($"Đã đồng bộ skin ID: {index} cho nhân vật.");
         }
     }
 }

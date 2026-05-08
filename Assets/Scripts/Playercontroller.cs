@@ -1,13 +1,8 @@
-using Spine.Unity;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+using Unity.Netcode; // THÊM THƯ VIỆN NÀY
 using UnityEngine;
-using static UnityEngine.EventSystems.EventTrigger;
-public enum PlayerState {Idle , Move , Jump , Falling}
+using System.Collections;
 
-public class Playercontroller : MonoBehaviour
+public class Playercontroller : NetworkBehaviour // ĐỔI TỪ MonoBehaviour SANG NetworkBehaviour
 {
     public AudioManager _audioManager;
     public GameObject _gameOverObject;
@@ -18,23 +13,21 @@ public class Playercontroller : MonoBehaviour
     public Transform model;
     public Animator amin;
     public bool IsGround;
-    public LayerMask groundLayer;
-    public Transform groundCheck;
     private int maxJump = 2;
     private int jumpCount = 0;
     public float offsetDeath = -6f;
     private Camera cam;
 
-    private void Start()
-    {
-        cam = Camera.main;
-    }
     private void Awake()
     {
-        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        var audioObj = GameObject.FindGameObjectWithTag("Audio");
+        if (audioObj != null) _audioManager = audioObj.GetComponent<AudioManager>();
     }
+
     private void Update()
     {
+        if (!IsOwner) return;
+
         Move();
         Jump();
         CheckFallDeath();
@@ -42,15 +35,14 @@ public class Playercontroller : MonoBehaviour
 
     private void Jump()
     {
-        if(IsGround)
-        {
-            jumpCount = 0;   
-        }
+        if (IsGround) jumpCount = 0;
+
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJump)
         {
             _rd.velocity = new Vector2(_rd.velocity.x, 0);
             _rd.AddForce(Vector2.up * jumForce, ForceMode2D.Impulse);
             jumpCount++;
+
             if (jumpCount == 2)
             {
                 amin.Play("DoubleJump");
@@ -59,43 +51,29 @@ public class Playercontroller : MonoBehaviour
         amin.SetFloat("IsJump", Mathf.Abs(_rd.velocity.y));
         amin.SetBool("IsDoubleJump", jumpCount == maxJump);
     }
+
     private void Move()
     {
         var moveHorizontal = Input.GetAxis("Horizontal");
-        if (Mathf.Abs(moveHorizontal) < 0.1f)
-        {
-            moveHorizontal = 0;
-        }
+        if (Mathf.Abs(moveHorizontal) < 0.1f) moveHorizontal = 0;
 
-        if (moveHorizontal < 0)
-        {
-            IsRight = false;
-        }
-        else if (moveHorizontal > 0)
-        {
-            IsRight = true;
-        }
+        if (moveHorizontal < 0) IsRight = false;
+        else if (moveHorizontal > 0) IsRight = true;
 
-        if (IsRight)
-        {
-            model.localScale = new Vector3(1, 1, 1);
-            _rd.velocity = new Vector3(moveHorizontal * speed, _rd.velocity.y);
-        }
-        else
-        {
-            model.localScale = new Vector3(-1, 1, 1);
-            _rd.velocity = new Vector3(moveHorizontal * speed, _rd.velocity.y);
-        }
+        model.localScale = IsRight ? new Vector3(1, 1, 1) : new Vector3(-1, 1, 1);
+
+        _rd.velocity = new Vector2(moveHorizontal * speed, _rd.velocity.y);
+
         amin.SetFloat("IsRun", Mathf.Abs(moveHorizontal));
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!IsOwner) return;
+
         if (collision.gameObject.CompareTag("Ground"))
         {
             IsGround = true;
-            Debug.Log("==== ALO! ĐÃ CHẠM ĐẤT RỒI NHÉ ====");
         }
 
         if (collision.gameObject.CompareTag("Enemy"))
@@ -105,12 +83,10 @@ public class Playercontroller : MonoBehaviour
                 if (point.normal.y == 1f)
                 {
                     EnemyMove enemy = collision.gameObject.GetComponent<EnemyMove>();
-
                     if (enemy != null)
-                    {
+                    { 
                         enemy.EnemyDie();
                     }
-                    return;
                 }
             }
         }
@@ -118,24 +94,51 @@ public class Playercontroller : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            IsGround = false;
-        }
+        if (!IsOwner) return;
+        if (collision.gameObject.CompareTag("Ground")) IsGround = false;
     }
+
     private void CheckFallDeath()
     {
-        if (model.position.y < cam.transform.position.y + offsetDeath)
+        if (!IsOwner) return;
+        float deathZoneY = -10f;
+
+        if (transform.position.y < deathZoneY)
         {
-            Debug.Log("Chet toi roi");
-            _audioManager.PlaySfx(_audioManager.failClip);
-            StartCoroutine(LoadFail());
-            gameObject.SetActive(false);
-            _gameOverObject.SetActive(true);    
+            RequestGameOverServerRpc();
         }
     }
-    IEnumerator LoadFail()
+
+    [ServerRpc]
+    private void RequestGameOverServerRpc()
     {
-        yield return new WaitForSeconds(1f);
+        NotifyAllPlayersDeathClientRpc();
+    }
+
+    [ClientRpc]
+    private void NotifyAllPlayersDeathClientRpc()
+    {
+        Debug.Log("Một thành viên hy sinh, cả đội Game Over!");
+
+        if (_audioManager != null)
+            _audioManager.PlaySfx(_audioManager.failClip);
+
+        if (_gameOverObject != null)
+            _gameOverObject.SetActive(true);
+
+        this.enabled = false;
+        GetComponent<Rigidbody2D>().simulated = false;
+    }
+
+    public override void OnNetworkSpawn()
+    {
+        if (IsOwner)
+        {
+            CameraFlower camScript = Camera.main.GetComponent<CameraFlower>();
+            if (camScript != null)
+            {
+                camScript.SetTarget(this.transform);
+            }
+        }
     }
 }
