@@ -1,39 +1,69 @@
+using Unity.Netcode;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
 
-public class BrickHitEffect : MonoBehaviour
+public class BrickHitEffect : NetworkBehaviour
 {
     public GameObject hitParticlePrefab;
     public AudioManager _audioManager;
 
     private void Awake()
     {
-        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        _audioManager =
+            GameObject.FindGameObjectWithTag("Audio")
+            .GetComponent<AudioManager>();
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!collision.gameObject.CompareTag("Player")) return;
+        if (!collision.gameObject.CompareTag("Player"))
+            return;
+
         foreach (ContactPoint2D contact in collision.contacts)
         {
             if (contact.normal.y > 0.5f)
             {
-                TriggerEffect(contact.point);
-                _audioManager.PlaySfx(_audioManager.breakClip);
+                HitBrickServerRpc(contact.point);
                 break;
             }
         }
     }
 
-    void TriggerEffect(Vector2 pos)
+    [ServerRpc(RequireOwnership = false)]
+    void HitBrickServerRpc(Vector2 pos)
     {
-        GameObject effect = Instantiate(hitParticlePrefab, pos, Quaternion.identity);
-        effect.transform.localScale = new Vector3(0.5f, 0.5f, 1f);
+        TriggerEffectClientRpc(pos);
 
-        ParticleSystem ps = effect.GetComponent<ParticleSystem>();
+        GameManager.Instance.AddCoin(10);
+
+        GetComponent<NetworkObject>().Despawn();
+    }
+
+    [ClientRpc]
+    void TriggerEffectClientRpc(Vector2 pos)
+    {
+        GameObject effect =
+            Instantiate(
+                hitParticlePrefab,
+                pos,
+                Quaternion.identity
+            );
+
+        effect.transform.localScale =
+            new Vector3(0.5f, 0.5f, 1f);
+
+        ParticleSystem ps =
+            effect.GetComponent<ParticleSystem>();
+
         if (ps != null)
             ps.Play();
-        gameObject.SetActive(false);
-        GameManager.Instance.AddCoin(10);
+
+        if (_audioManager != null)
+        {
+            _audioManager.PlaySfx(
+                _audioManager.breakClip
+            );
+        }
+
         Destroy(effect, 2f);
     }
 }

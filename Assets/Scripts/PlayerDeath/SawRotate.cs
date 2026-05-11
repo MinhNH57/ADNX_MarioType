@@ -43,15 +43,17 @@
 
 
 using System.Collections;
+using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class SawRotate : MonoBehaviour
+public class SawRotate : NetworkBehaviour
 {
     public AudioManager _audioManager;
     public float rotateSpeed = 200f;
     public GameObject _gameOverObject;
 
-    private bool isTriggered = false; // ❗ tránh trigger nhiều lần
+    private bool isTriggered = false; 
 
     private void Awake()
     {
@@ -76,47 +78,82 @@ public class SawRotate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isTriggered) return;
-        if (!collision.CompareTag("Player")) return;
+        if (!NetworkManager.Singleton.IsServer)
+            return;
+        if (!collision.CompareTag("Player"))
+            return;
+        NetworkObject netWorkObject = collision.gameObject.GetComponent<NetworkObject>();
+        if (netWorkObject == null)
+            return;
+        ulong deadClientId = netWorkObject.OwnerClientId;
 
-        isTriggered = true;
+        ClientRpcParams rpcParams = new ClientRpcParams
+        {
+            Send = new ClientRpcSendParams
+            {
+                TargetClientIds = new List<ulong> { deadClientId }
+            }
+        };
+        ShowGameOverClientRpc(rpcParams);
+        netWorkObject.Despawn(true);
 
+    }
+
+    [ClientRpc]
+    void ShowGameOverClientRpc(
+    ClientRpcParams rpcParams = default)
+    {
         if (_audioManager != null)
         {
             _audioManager.PlaySfx(_audioManager.failClip);
         }
-
-        int finalScore = GameManager.Instance.coinCount;
-        Debug.Log("💀 Player chết | Score: " + finalScore);
-
         if (GameManager.Instance != null)
         {
+            int finalScore =
+                GameManager.Instance.coinCount;
             GameManager.Instance.UpdateHighScore(finalScore);
         }
-        else
-        {
-            Debug.LogError("❌ GameManager NULL");
-        }
-
-        collision.gameObject.SetActive(false);
-
         if (_gameOverObject != null)
         {
             _gameOverObject.SetActive(true);
         }
-        else
-        {
-            Debug.LogError("❌ GameOverObject chưa gán");
-        }
-
         StartCoroutine(LoadFail());
     }
 
     IEnumerator LoadFail()
     {
         yield return new WaitForSeconds(1f);
-
-        // 👉 Nếu muốn reload scene:
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
+
+//isTriggered = true;
+
+//if (_audioManager != null)
+//{
+//    _audioManager.PlaySfx(_audioManager.failClip);
+//}
+
+//int finalScore = GameManager.Instance.coinCount;
+//Debug.Log("💀 Player chết | Score: " + finalScore);
+
+//if (GameManager.Instance != null)
+//{
+//    GameManager.Instance.UpdateHighScore(finalScore);
+//}
+//else
+//{
+//    Debug.LogError("❌ GameManager NULL");
+//}
+
+//collision.gameObject.SetActive(false);
+
+//if (_gameOverObject != null)
+//{
+//    _gameOverObject.SetActive(true);
+//}
+//else
+//{
+//    Debug.LogError("❌ GameOverObject chưa gán");
+//}
+
+//StartCoroutine(LoadFail());

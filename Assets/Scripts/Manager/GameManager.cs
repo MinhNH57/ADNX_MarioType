@@ -126,4 +126,14 @@ public class GameManager : MonoBehaviour
             Debug.Log("⏭️ Score không cao hơn, không update");
         }
     }
+
+    public void ResetGame()
+    {
+        coinCount = 0;
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.UpdateCoin(coinCount);
+        }
+    }
 }

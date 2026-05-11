@@ -84,8 +84,8 @@ public class Playercontroller : NetworkBehaviour // ĐỔI TỪ MonoBehaviour SA
                 {
                     EnemyMove enemy = collision.gameObject.GetComponent<EnemyMove>();
                     if (enemy != null)
-                    { 
-                        enemy.EnemyDie();
+                    {
+                        enemy.KillEnemyServerRpc();
                     }
                 }
             }

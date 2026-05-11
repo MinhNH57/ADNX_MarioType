@@ -19,6 +19,7 @@ public class NetworkBootstrap : MonoBehaviour
             System.Environment.GetCommandLineArgs();
 
         bool isHost = false;
+        bool isServer = false;  
 
         foreach (string arg in args)
         {
@@ -26,6 +27,10 @@ public class NetworkBootstrap : MonoBehaviour
             {
                 isHost = true;
                 break;
+            }else if(arg == "-sever")
+            {
+                isServer = true;
+                break;  
             }
         }
 
@@ -34,6 +39,10 @@ public class NetworkBootstrap : MonoBehaviour
             Debug.Log("START HOST");
 
             NetworkManager.Singleton.StartHost();
+        }
+        else if (isServer)
+        {
+            NetworkManager.Singleton.StartServer();
         }
         else
         {
