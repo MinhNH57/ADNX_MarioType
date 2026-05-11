@@ -8,12 +8,12 @@
 
 //public class PlayerDeath : NetworkBehaviour
 //{
-//    public AudioManager _audioManager;
-//    public GameObject _gameOverObject;
+//    public AudioManager audioManager;
+//    public GameObject gameOverObject;
 
 //    private void Awake()
 //    {
-//        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>(); 
+//        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>(); 
 //    }
 //    private void OnTriggerEnter2D(Collider2D collision)
 //    {
@@ -30,13 +30,13 @@
 //    [ClientRpc]
 //    void ShowGameOverClientRpc()
 //    {
-//        _audioManager.PlaySfx(_audioManager.failClip);
+//        audioManager.PlaySfx(audioManager.failClip);
 
 //        int finalScore = GameManager.Instance.coinCount;
 
 //        GameManager.Instance.UpdateHighScore(finalScore);
 
-//        _gameOverObject.SetActive(true);
+//        gameOverObject.SetActive(true);
 //    }
 
 //    IEnumerator RestartRoutine()
@@ -58,6 +58,7 @@
 
 
 using System.Collections;
+using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -89,51 +90,45 @@ public class PlayerDeath : NetworkBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // chỉ server xử lý game over
-        if (!IsServer) return;
+        if (!NetworkManager.Singleton.IsServer)
+            return;
+        if (!collision.CompareTag("Player"))
+            return;
+        NetworkObject netWorkObject = collision.gameObject.GetComponent<NetworkObject>();
+        if (netWorkObject == null)
+            return;
+        ulong deadClientId = netWorkObject.OwnerClientId;
 
-        // tránh gọi nhiều lần
-        if (isGameOver) return;
-
-        if (collision.CompareTag("Player"))
+        ClientRpcParams rpcParams = new ClientRpcParams
         {
-            isGameOver = true;
-
-            Debug.Log("GAME OVER");
-
-            // hiện UI cho tất cả client
-            ShowGameOverClientRpc();
-
-            // restart game
-            StartCoroutine(RestartRoutine());
-        }
+            Send = new ClientRpcSendParams
+            {
+                TargetClientIds = new List<ulong> { deadClientId }
+            }
+        };
+        ShowGameOverClientRpc(rpcParams);
+        netWorkObject.Despawn(true);
     }
 
     [ClientRpc]
-    private void ShowGameOverClientRpc()
+    void ShowGameOverClientRpc(
+    ClientRpcParams rpcParams = default)
     {
-        Debug.Log("Show Game Over UI");
-
-        // play sound
         if (audioManager != null)
         {
             audioManager.PlaySfx(audioManager.failClip);
         }
-
-        // save high score
         if (GameManager.Instance != null)
         {
             int finalScore =
                 GameManager.Instance.coinCount;
-
             GameManager.Instance.UpdateHighScore(finalScore);
         }
-
-        // show game over ui
         if (gameOverObject != null)
         {
             gameOverObject.SetActive(true);
         }
+        StartCoroutine(LoadFail());
     }
 
     private IEnumerator RestartRoutine()
@@ -160,5 +155,10 @@ public class PlayerDeath : NetworkBehaviour
     private void OnDestroy()
     {
         StopAllCoroutines();
+    }
+
+    IEnumerator LoadFail()
+    {
+        yield return new WaitForSeconds(1f);
     }
 }

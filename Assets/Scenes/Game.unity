@@ -7175,6 +7175,10 @@ PrefabInstance:
       value: 3595551815
       objectReference: {fileID: 0}
     - target: {fileID: 8708857182118855854, guid: b7318db036786974a9cda371a5ae381d, type: 3}
+      propertyPath: gameOverObject
+      value: 
+      objectReference: {fileID: 1624932395}
+    - target: {fileID: 8708857182118855854, guid: b7318db036786974a9cda371a5ae381d, type: 3}
       propertyPath: _gameOverObject
       value: 
       objectReference: {fileID: 1624932395}
@@ -7640,6 +7644,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 8555214681377745706, guid: f99d8ec6f33a2b849b0fc7d57c25eea3, type: 3}
+      propertyPath: gameOverObject
+      value: 
+      objectReference: {fileID: 1624932395}
     - target: {fileID: 8555214681377745706, guid: f99d8ec6f33a2b849b0fc7d57c25eea3, type: 3}
       propertyPath: _gameOverObject
       value: 

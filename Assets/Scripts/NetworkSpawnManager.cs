@@ -27,13 +27,10 @@ public class NetworkSpawnManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
 
-        // Debug kiểm tra
-        Debug.Log("transformPlayer null? " + (transformPlayer == null));
         if (transformPlayer != null)
             Debug.Log("transformPlayer active? " + transformPlayer.gameObject.activeInHierarchy);
 
         var spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
-        Debug.Log("SpawnPoint tìm được? " + (spawnPoint != null));
         if (spawnPoint != null)
             Debug.Log("SpawnPoint pos: " + spawnPoint.transform.position);
 
@@ -49,8 +46,6 @@ public class NetworkSpawnManager : MonoBehaviour
         {
             transformPlayer.position = spawnPos;
         }
-        Debug.Log("Đã set Player tại: " + spawnPos);
-        Debug.Log("Player thực tế ở: " + transformPlayer.position);
     }
 
 }

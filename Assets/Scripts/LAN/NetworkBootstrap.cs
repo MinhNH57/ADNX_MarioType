@@ -18,14 +18,14 @@ public class NetworkBootstrap : MonoBehaviour
         string[] args =
             System.Environment.GetCommandLineArgs();
 
-        bool isHost = false;
-        bool isServer = false;  
+        bool isServer = false;
+        bool isClient = false;
 
         foreach (string arg in args)
         {
-            if (arg == "-host")
+            if (arg == "-client")
             {
-                isHost = true;
+                isClient = true;
                 break;
             }else if(arg == "-sever")
             {
@@ -34,11 +34,12 @@ public class NetworkBootstrap : MonoBehaviour
             }
         }
 
-        if (isHost)
+        if (isClient)
         {
             Debug.Log("START HOST");
-
-            NetworkManager.Singleton.StartHost();
+            transport.ConnectionData.Address =
+                "127.0.0.1";
+            NetworkManager.Singleton.StartClient();
         }
         else if (isServer)
         {
@@ -46,12 +47,7 @@ public class NetworkBootstrap : MonoBehaviour
         }
         else
         {
-            Debug.Log("START CLIENT");
-
-            transport.ConnectionData.Address =
-                "127.0.0.1";
-
-            NetworkManager.Singleton.StartClient();
+            NetworkManager.Singleton.StartHost();
         }
     }
 }
