@@ -78,15 +78,15 @@ public class SawRotate : NetworkBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!NetworkManager.Singleton.IsServer)
-            return;
-        if (!collision.CompareTag("Player"))
-            return;
-        NetworkObject netWorkObject = collision.gameObject.GetComponent<NetworkObject>();
-        if (netWorkObject == null)
-            return;
-        ulong deadClientId = netWorkObject.OwnerClientId;
+        if (!NetworkManager.Singleton.IsServer) return;
+        if (!collision.CompareTag("Player")) return;
 
+        NetworkObject netWorkObject = collision.gameObject.GetComponent<NetworkObject>();
+
+        if (netWorkObject == null) return;
+        if (!netWorkObject.IsSpawned) return; // ← thêm dòng này
+
+        ulong deadClientId = netWorkObject.OwnerClientId;
         ClientRpcParams rpcParams = new ClientRpcParams
         {
             Send = new ClientRpcSendParams
@@ -94,9 +94,9 @@ public class SawRotate : NetworkBehaviour
                 TargetClientIds = new List<ulong> { deadClientId }
             }
         };
+
         ShowGameOverClientRpc(rpcParams);
         netWorkObject.Despawn(true);
-
     }
 
     [ClientRpc]

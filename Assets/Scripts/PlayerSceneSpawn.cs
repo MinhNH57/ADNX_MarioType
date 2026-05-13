@@ -26,7 +26,6 @@ public class PlayerSceneSpawn : NetworkBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (!IsServer) return;
-
         StartCoroutine(SetSpawnPosition(scene));
     }
 
@@ -36,22 +35,27 @@ public class PlayerSceneSpawn : NetworkBehaviour
         yield return null;
 
         Vector3 spawnPos = Vector3.zero;
-
-        GameObject spawnPoint =
-            GameObject.FindGameObjectWithTag("SpawnPoint");
-
+        GameObject spawnPoint = GameObject.FindGameObjectWithTag("SpawnPoint");
         if (spawnPoint != null)
         {
             spawnPos = spawnPoint.transform.position;
         }
 
-        // QUAN TRỌNG
+        // Gọi ClientRpc để đúng owner tự teleport
+        TeleportClientRpc(spawnPos);
+    }
+
+    [ClientRpc]
+    private void TeleportClientRpc(Vector3 spawnPos)
+    {
+        // Chỉ chạy trên owner của object này
+        if (!IsOwner) return;
+
         netTransform.Teleport(
             spawnPos,
             Quaternion.identity,
             transform.localScale
         );
-
         Debug.Log("Teleport player tới: " + spawnPos);
     }
 }
