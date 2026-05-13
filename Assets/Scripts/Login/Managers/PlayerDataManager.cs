@@ -26,30 +26,94 @@ public class PlayerDataManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    public PlayerData AddOrGetPlayer(string name)
+    public void AddOrGetPlayer(
+        string name,
+        System.Action<PlayerData> callback)
     {
-        var existing = data.players.FirstOrDefault(p => p.playerName == name);
+        StartCoroutine(
+            PlayerService.GetPlayers(
+                (players) =>
+                {
+                    PlayerData existing =
+                        players.Find(
+                            p => p.playerName == name
+                        );
 
-        if (existing != null)
-        {
-            Debug.Log("Player đã tồn tại");
-            return existing;
-        }
+                    if (existing != null)
+                    {
+                        callback?.Invoke(existing);
+                        return;
+                    }
 
-        PlayerData newPlayer = new PlayerData(name);
-        data.players.Add(newPlayer);
+                    if (_isCreatingPlayer) return;
+                    _isCreatingPlayer = true;
 
-        SaveData();
+                    PlayerData newPlayer = new PlayerData();
+                    newPlayer.playerName = name;
+                    newPlayer.hightScore = 0;
 
-        return newPlayer;
+                    StartCoroutine(
+                        PlayerService.CreatePlayer(
+                            newPlayer,
+                            onSuccess: (created) =>
+                            {
+                                _isCreatingPlayer = false;
+                                callback?.Invoke(created);
+                            },
+                            onError: (err) =>
+                            {
+                                _isCreatingPlayer = false;
+                                Debug.LogError("[AddOrGetPlayer] " + err);
+                                callback?.Invoke(null);
+                            }
+                        )
+                    );
+                }
+            )
+        );
     }
 
-    public void SaveData()
-    {
-        string json = JsonUtility.ToJson(data, true);
-        File.WriteAllText(filePath, json);
-    }
+    private bool _isCreatingPlayer = false; 
+    //public void AddOrGetPlayer(
+    //    string name,
+    //    System.Action<PlayerData> callback)
+    //{
+    //    StartCoroutine(
+    //        PlayerService.GetPlayers(
+    //            (players) =>
+    //            {
+    //                PlayerData existing =
+    //                    players.Find(
+    //                        p => p.playerName == name
+    //                    );
+    //                if (existing != null)
+    //                {
+    //                    callback?.Invoke(existing);
+    //                    return;
+    //                }
+
+    //                PlayerData newPlayer =
+    //                    new PlayerData();
+
+    //                newPlayer.playerName = name;
+    //                newPlayer.hightScore = 0;
+
+    //                data.players.Add(newPlayer);
+
+    //                SaveData();
+
+    //                callback?.Invoke(newPlayer);
+    //            }
+    //        )
+    //    );
+    //}
+
+    //public void SaveData()
+    //{
+    //    string json = JsonUtility.ToJson(data, true);
+    //    File.WriteAllText(filePath, json);
+    //}
+
 
 
     public void LoadData()
@@ -81,7 +145,7 @@ public class PlayerDataManager : MonoBehaviour
     public List<PlayerData> GetLeaderboard()
     {
         return data.players
-            .OrderByDescending(p => p.highScore)
+            .OrderByDescending(p => p.hightScore)
             .ToList();
     }
 }

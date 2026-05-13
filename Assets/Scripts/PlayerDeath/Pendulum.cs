@@ -117,6 +117,7 @@ public class Pendulum : NetworkBehaviour
             }
         };
         ShowGameOverClientRpc(rpcParams);
+        _gameOverObject.SetActive(true);
         playerNetObj.Despawn(true);
     }
     [ClientRpc]
@@ -132,10 +133,6 @@ public class Pendulum : NetworkBehaviour
             int finalScore =
                 GameManager.Instance.coinCount;
             GameManager.Instance.UpdateHighScore(finalScore);
-        }
-        if (_gameOverObject != null)
-        {
-            _gameOverObject.SetActive(true);
         }
         StartCoroutine(LoadFail());
     }

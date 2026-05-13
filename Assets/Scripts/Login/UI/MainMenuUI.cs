@@ -59,7 +59,15 @@ public class MainMenuUI : MonoBehaviour
         Debug.Log("PlayerDataManager: " + (PlayerDataManager.Instance == null ? "NULL ❌" : "OK ✅"));
         Debug.Log("GameManager: " + (GameManager.Instance == null ? "NULL ❌" : "OK ✅"));
 
-        PlayerDataManager.Instance.AddOrGetPlayer(playerName);
+        PlayerDataManager.Instance.AddOrGetPlayer(
+            playerName,
+            (player) =>
+            {
+                Debug.Log(
+                    player.playerName
+                );
+            }
+        );
         GameManager.Instance.SetCurrentPlayer(playerName);
         SceneManager.LoadScene("ChonNhanVat");
     }

@@ -48,6 +48,7 @@
 //    }
 //}
 
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -74,27 +75,33 @@ public class GameManager : MonoBehaviour
     }
     public void SetCurrentPlayer(string playerName)
     {
-        var player = PlayerDataManager.Instance.AddOrGetPlayer(playerName);
-        currentPlayerId = player.id;
+        PlayerDataManager.Instance.AddOrGetPlayer(
+            playerName,
+            (player) =>
+            {
+                currentPlayerId = player.id.ToString(); 
+
+                Debug.Log(
+                    "Current Player ID: " +
+                    currentPlayerId
+                );
+            }
+        );
     }
 
-    private PlayerData GetCurrentPlayer()
+    public void GetCurrentPlayer(Action<PlayerData> callback)
     {
-        if (string.IsNullOrEmpty(currentPlayerId))
-        {
-            Debug.LogError("❌ currentPlayerId chưa được set");
-            return null;
-        }
-
-        var player = PlayerDataManager.Instance.data.players
-            .FirstOrDefault(p => p.id == currentPlayerId);
-
-        if (player == null)
-        {
-            Debug.LogError("❌ Không tìm thấy player trong data");
-        }
-
-        return player;
+        StartCoroutine(
+            PlayerService.GetPlayers(
+                (players) =>
+                {
+                    PlayerData player = players.FirstOrDefault(
+                        p => p.id.ToString() == currentPlayerId
+                    );
+                    callback?.Invoke(player);
+                }
+            )
+        );
     }
 
     public void AddCoin(int amount)
@@ -108,23 +115,68 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //public void UpdateHighScore(int newScore)
+    //{
+    //    var player = GetCurrentPlayer();
+    //    if (player == null) return;
+
+    //    Debug.Log($"🎯 Before Update: {player.hightScore}");
+
+    //    if (newScore > player.hightScore)
+    //    {
+    //        player.hightScore = newScore;
+
+    //        StartCoroutine(
+    //            PlayerService.UpdatePlayer(
+    //                player,
+    //                onSuccess: (updated) =>
+    //                {
+    //                    Debug.Log($"✅ Đã lưu high score: {updated.hightScore}");
+    //                },
+    //                onError: (err) =>
+    //                {
+    //                    Debug.LogError("[UpdateHighScore] " + err);
+    //                }
+    //            )
+    //        );
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("⏭️ Score không cao hơn, không update");
+    //    }
+    //}
+
     public void UpdateHighScore(int newScore)
     {
-        var player = GetCurrentPlayer();
-        if (player == null) return;
-
-        Debug.Log($"🎯 Before Update: {player.highScore}");
-
-        if (newScore > player.highScore)
+        GetCurrentPlayer((player) =>
         {
-            player.highScore = newScore;
+            if (player == null) return;
 
-            PlayerDataManager.Instance.SaveData();
-        }
-        else
-        {
-            Debug.Log("⏭️ Score không cao hơn, không update");
-        }
+            Debug.Log($"🎯 Before Update: {player.hightScore}");
+
+            if (newScore > player.hightScore)
+            {
+                player.hightScore = newScore;
+
+                StartCoroutine(
+                    PlayerService.UpdatePlayer(
+                        player,
+                        onSuccess: (updated) =>
+                        {
+                            Debug.Log($"✅ Đã lưu high score: {updated.hightScore}");
+                        },
+                        onError: (err) =>
+                        {
+                            Debug.LogError("[UpdateHighScore] " + err);
+                        }
+                    )
+                );
+            }
+            else
+            {
+                Debug.Log("⏭️ Score không cao hơn, không update");
+            }
+        });
     }
 
     public void ResetGame()

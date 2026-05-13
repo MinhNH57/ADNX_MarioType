@@ -1,3 +1,5 @@
+using Newtonsoft.Json;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,14 +7,16 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
-    public string id;
-    public string playerName;
-    public int highScore;
+    //public Guid? Id { get; set; } = Guid.NewGuid();
+    //public string playerName { get; set; }
+    //public int hightScore { get; set; } = 0;
 
-    public PlayerData(string name)
-    {
-        id = System.Guid.NewGuid().ToString();
-        playerName = name;
-        highScore = 0;
-    }
+    [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
+    public Guid? id = null;
+
+    [JsonProperty("playerName")]
+    public string playerName;
+
+    [JsonProperty("hightScore")]
+    public int hightScore = 0;
 }

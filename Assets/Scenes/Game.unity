@@ -1706,6 +1706,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7326323651614892507, guid: d25fe0d1256274543a83bebb8d062eaa, type: 3}
+      propertyPath: gameOverObject
+      value: 
+      objectReference: {fileID: 1624932395}
+    - target: {fileID: 7326323651614892507, guid: d25fe0d1256274543a83bebb8d062eaa, type: 3}
       propertyPath: _gameOverObject
       value: 
       objectReference: {fileID: 1624932395}
@@ -3632,8 +3636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86bbf07e46488e45bc85209a9ad1ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabs: []
-  spawnPoint: {fileID: 0}
+  _gameOverObject: {fileID: 1624932395}
 --- !u!1 &921615149
 GameObject:
   m_ObjectHideFlags: 0
@@ -5933,10 +5936,10 @@ RectTransform:
   - {fileID: 1144803161}
   m_Father: {fileID: 1240727035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.3199997, y: 4.9399986}
-  m_SizeDelta: {x: 1712.99, y: 813.66}
+  m_SizeDelta: {x: 1812.99, y: 913.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1871919585
 MonoBehaviour:

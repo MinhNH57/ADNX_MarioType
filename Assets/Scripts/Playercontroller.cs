@@ -1,8 +1,8 @@
-using Unity.Netcode; // THÊM THƯ VIỆN NÀY
+using Unity.Netcode;
 using UnityEngine;
 using System.Collections;
 
-public class Playercontroller : NetworkBehaviour // ĐỔI TỪ MonoBehaviour SANG NetworkBehaviour
+public class Playercontroller : NetworkBehaviour
 {
     public AudioManager _audioManager;
     public GameObject _gameOverObject;

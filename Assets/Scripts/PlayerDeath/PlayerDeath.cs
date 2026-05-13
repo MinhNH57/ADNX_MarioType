@@ -57,6 +57,7 @@
 //}
 
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
@@ -94,11 +95,12 @@ public class PlayerDeath : NetworkBehaviour
             return;
         if (!collision.CompareTag("Player"))
             return;
-        NetworkObject netWorkObject = collision.gameObject.GetComponent<NetworkObject>();
-        if (netWorkObject == null)
-            return;
-        ulong deadClientId = netWorkObject.OwnerClientId;
 
+        NetworkObject netWorkObject = collision.gameObject.GetComponent<NetworkObject>();
+        if (netWorkObject == null) return;
+        if (!netWorkObject.IsSpawned) return; 
+
+        ulong deadClientId = netWorkObject.OwnerClientId;
         ClientRpcParams rpcParams = new ClientRpcParams
         {
             Send = new ClientRpcSendParams
@@ -106,8 +108,21 @@ public class PlayerDeath : NetworkBehaviour
                 TargetClientIds = new List<ulong> { deadClientId }
             }
         };
+
         ShowGameOverClientRpc(rpcParams);
-        netWorkObject.Despawn(true);
+
+      
+        StartCoroutine(DespawnAfterDelay(netWorkObject));
+    }
+
+    private IEnumerator DespawnAfterDelay(NetworkObject netWorkObject)
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        if (netWorkObject != null && netWorkObject.IsSpawned)
+        {
+            netWorkObject.Despawn(true);
+        }
     }
 
     [ClientRpc]
@@ -126,6 +141,7 @@ public class PlayerDeath : NetworkBehaviour
         }
         if (gameOverObject != null)
         {
+            Debug.Log("Over 1 " + DateTime.Now);
             gameOverObject.SetActive(true);
         }
         StartCoroutine(LoadFail());

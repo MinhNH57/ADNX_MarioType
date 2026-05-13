@@ -74,7 +74,7 @@ public class LeaderboardUI : MonoBehaviour
 
             if (rowUI != null)
             {
-                rowUI.SetData(i + 1, players[i].playerName, players[i].highScore);
+                rowUI.SetData(i + 1, players[i].playerName, players[i].hightScore);
             }
             else
             {
