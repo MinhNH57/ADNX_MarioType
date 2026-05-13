@@ -141,7 +141,6 @@ public class PlayerDeath : NetworkBehaviour
         }
         if (gameOverObject != null)
         {
-            Debug.Log("Over 1 " + DateTime.Now);
             gameOverObject.SetActive(true);
         }
         StartCoroutine(LoadFail());

@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
         Instance = this;
     }
 
+
     public void UpdateCoin(int coin)
     {
         coinText.text = "Coin: " + coin;

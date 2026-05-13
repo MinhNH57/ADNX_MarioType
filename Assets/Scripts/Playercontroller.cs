@@ -85,6 +85,7 @@ public class Playercontroller : NetworkBehaviour
                     EnemyMove enemy = collision.gameObject.GetComponent<EnemyMove>();
                     if (enemy != null)
                     {
+                        Debug.Log("Quai chet");
                         enemy.KillEnemyServerRpc();
                     }
                 }

@@ -107,6 +107,7 @@ public class Pendulum : NetworkBehaviour
             collision.GetComponent<NetworkObject>();
         if (playerNetObj == null)
             return;
+        if (!canKill) return;
         ulong deadClientId =
             playerNetObj.OwnerClientId;
         ClientRpcParams rpcParams = new ClientRpcParams
@@ -119,6 +120,13 @@ public class Pendulum : NetworkBehaviour
         ShowGameOverClientRpc(rpcParams);
         _gameOverObject.SetActive(true);
         playerNetObj.Despawn(true);
+    }
+    private bool canKill = false;
+
+    IEnumerator Start()
+    {
+        yield return new WaitForSeconds(1f);
+        canKill = true;
     }
     [ClientRpc]
     void ShowGameOverClientRpc(

@@ -71,6 +71,15 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        
+        }
+    }
+    private void Start()
+    {
+        GameObject overObject = GameObject.Find("GameOver");
+        if (overObject != null)
+        {
+            Debug.Log("GameOver đang hoạt động");
         }
     }
     public void SetCurrentPlayer(string playerName)
@@ -80,11 +89,6 @@ public class GameManager : MonoBehaviour
             (player) =>
             {
                 currentPlayerId = player.id.ToString(); 
-
-                Debug.Log(
-                    "Current Player ID: " +
-                    currentPlayerId
-                );
             }
         );
     }
