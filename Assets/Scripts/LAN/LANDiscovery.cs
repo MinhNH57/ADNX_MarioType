@@ -178,12 +178,18 @@ public class LANDiscovery : MonoBehaviour
 
             if (message == "UNITY_HOST")
             {
-                string hostIP =
-                    remoteEP.Address.ToString();
 
-                Debug.Log("Found Host: " + hostIP);
+                string hostIP = remoteEP.Address.ToString();
+                if(IsLocalIP(hostIP))
+                {
+                    Debug.Log("Đang nhận dữ liệu từ chính mình");
+                }
+                else
+                {
+                    Debug.Log("Found Host: " + hostIP);
 
-                OnHostFound?.Invoke(hostIP);
+                    OnHostFound?.Invoke(hostIP);
+                }
             }
 
             if (isRunning && udpClient != null)
@@ -208,5 +214,19 @@ public class LANDiscovery : MonoBehaviour
         udpClient?.Close();
 
         udpClient = null;
+    }
+
+    private bool IsLocalIP(string ip)
+    {
+        IPHostEntry host = Dns.GetHostEntry(Dns.GetHostName());
+        foreach (IPAddress localIP in host.AddressList)
+        {
+            if (localIP.AddressFamily == AddressFamily.InterNetwork)
+            {
+                if (localIP.ToString() == ip)
+                    return true;
+            }
+        }
+        return false;
     }
 }

@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
         PlayerDataManager.Instance.AddOrGetPlayer(
             playerName,
             (player) =>
-            {
+            { 
                 currentPlayerId = player.id.ToString(); 
             }
         );

@@ -1,5 +1,6 @@
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
+using UnityEditor;
 using UnityEngine;
 
 public class NetworkBootstrap : MonoBehaviour
@@ -20,6 +21,7 @@ public class NetworkBootstrap : MonoBehaviour
 
         bool isServer = false;
         bool isClient = false;
+        bool isHost = false;
 
         foreach (string arg in args)
         {
@@ -31,15 +33,15 @@ public class NetworkBootstrap : MonoBehaviour
             {
                 isServer = true;
                 break;  
+            }else if(arg == "-host")
+            {
+                isHost = true;
             }
         }
 
-        if (isClient)
+        if (isHost)
         {
-            Debug.Log("START HOST");
-            transport.ConnectionData.Address =
-                "127.0.0.1";
-            NetworkManager.Singleton.StartClient();
+            NetworkManager.Singleton.StartHost();
         }
         else if (isServer)
         {
@@ -47,7 +49,10 @@ public class NetworkBootstrap : MonoBehaviour
         }
         else
         {
-            NetworkManager.Singleton.StartHost();
+            Debug.Log("START HOST");
+            transport.ConnectionData.Address =
+                "127.0.0.1";
+            NetworkManager.Singleton.StartClient();
         }
     }
 }

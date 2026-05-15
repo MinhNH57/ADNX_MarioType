@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PlayerDataManager : MonoBehaviour
 {
@@ -73,79 +75,25 @@ public class PlayerDataManager : MonoBehaviour
         );
     }
 
-    private bool _isCreatingPlayer = false; 
-    //public void AddOrGetPlayer(
-    //    string name,
-    //    System.Action<PlayerData> callback)
-    //{
-    //    StartCoroutine(
-    //        PlayerService.GetPlayers(
-    //            (players) =>
-    //            {
-    //                PlayerData existing =
-    //                    players.Find(
-    //                        p => p.playerName == name
-    //                    );
-    //                if (existing != null)
-    //                {
-    //                    callback?.Invoke(existing);
-    //                    return;
-    //                }
-
-    //                PlayerData newPlayer =
-    //                    new PlayerData();
-
-    //                newPlayer.playerName = name;
-    //                newPlayer.hightScore = 0;
-
-    //                data.players.Add(newPlayer);
-
-    //                SaveData();
-
-    //                callback?.Invoke(newPlayer);
-    //            }
-    //        )
-    //    );
-    //}
-
-    //public void SaveData()
-    //{
-    //    string json = JsonUtility.ToJson(data, true);
-    //    File.WriteAllText(filePath, json);
-    //}
-
-
+    private bool _isCreatingPlayer = false;
 
     public void LoadData()
     {
-        if (File.Exists(filePath))
-        {
-            string json = File.ReadAllText(filePath);
+        StartCoroutine(
+            PlayerService.GetPlayers(
+                (players) =>
+                {
+                    data.players = players;
 
-            data = JsonUtility.FromJson<PlayerDataList>(json);
-            if (data == null)
-            {
-                data = new PlayerDataList();
-            }
-
-            if (data.players == null)
-            {
-                data.players = new List<PlayerData>();
-            }
-
-            Debug.Log("Loaded players: " + data.players.Count);
-        }
-        else
-        {
-            data = new PlayerDataList();
-            data.players = new List<PlayerData>();
-        }
+                    Debug.Log("Hello " +data.players.Count());
+                }
+            )
+        );
     }
 
     public List<PlayerData> GetLeaderboard()
     {
-        return data.players
-            .OrderByDescending(p => p.hightScore)
-            .ToList();
+        var _lst = data.players.OrderByDescending(p => p.hightScore).ToList();
+        return _lst;
     }
 }

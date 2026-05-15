@@ -12,11 +12,11 @@ public class PlayerData
     //public int hightScore { get; set; } = 0;
 
     [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
-    public Guid? id = null;
+    public Guid? id ;
 
     [JsonProperty("playerName")]
     public string playerName;
 
     [JsonProperty("hightScore")]
-    public int hightScore = 0;
+    public int hightScore ;
 }
