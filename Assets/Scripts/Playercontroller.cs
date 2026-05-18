@@ -17,6 +17,12 @@ public class Playercontroller : NetworkBehaviour
     private int jumpCount = 0;
     public float offsetDeath = -6f;
     private Camera cam;
+    private NetworkVariable<bool> isRight =
+        new NetworkVariable<bool>(
+            true,
+            NetworkVariableReadPermission.Everyone,
+            NetworkVariableWritePermission.Owner
+        );
 
     private void Awake()
     {
@@ -26,11 +32,22 @@ public class Playercontroller : NetworkBehaviour
 
     private void Update()
     {
-        if (!IsOwner) return;
+        if (IsOwner)
+        {
+            Move();
+            Jump();
+            CheckFallDeath();
+        }
+        ApplyFlip();
 
-        Move();
-        Jump();
-        CheckFallDeath();
+    }
+
+    private void ApplyFlip()
+    {
+        model.localScale =
+            isRight.Value
+                ? new Vector3(1, 1, 1)
+                : new Vector3(-1, 1, 1);
     }
 
     private void Jump()
@@ -45,7 +62,7 @@ public class Playercontroller : NetworkBehaviour
 
             if (jumpCount == 2)
             {
-                amin.Play("DoubleJump");
+                PlayDoubleJumpServerRpc();
             }
         }
         amin.SetFloat("IsJump", Mathf.Abs(_rd.velocity.y));
@@ -55,18 +72,24 @@ public class Playercontroller : NetworkBehaviour
     private void Move()
     {
         var moveHorizontal = Input.GetAxis("Horizontal");
-        if (Mathf.Abs(moveHorizontal) < 0.1f) moveHorizontal = 0;
 
-        if (moveHorizontal < 0) IsRight = false;
-        else if (moveHorizontal > 0) IsRight = true;
+        if (Mathf.Abs(moveHorizontal) < 0.1f)
+            moveHorizontal = 0;
 
-        model.localScale = IsRight ? new Vector3(1, 1, 1) : new Vector3(-1, 1, 1);
+        if (moveHorizontal < 0 && isRight.Value)
+        {
+            isRight.Value = false;
+        }
+        else if (moveHorizontal > 0 && !isRight.Value)
+        {
+            isRight.Value = true;
+        }
 
-        _rd.velocity = new Vector2(moveHorizontal * speed, _rd.velocity.y);
+        _rd.velocity =
+            new Vector2(moveHorizontal * speed, _rd.velocity.y);
 
         amin.SetFloat("IsRun", Mathf.Abs(moveHorizontal));
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!IsOwner) return;
@@ -141,5 +164,17 @@ public class Playercontroller : NetworkBehaviour
                 camScript.SetTarget(this.transform);
             }
         }
+    }
+
+    [ServerRpc]
+    private void PlayDoubleJumpServerRpc()
+    {
+        PlayDoubleJumpClientRpc();
+    }
+
+    [ClientRpc]
+    private void PlayDoubleJumpClientRpc()
+    {
+        amin.Play("DoubleJump");
     }
 }

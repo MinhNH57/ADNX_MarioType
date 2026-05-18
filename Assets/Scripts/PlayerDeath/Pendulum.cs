@@ -116,8 +116,6 @@ public class Pendulum : NetworkBehaviour
         // Chỉ owner local mới hiện UI
         if (!IsOwner) return;
 
-        Debug.Log("GAME OVER");
-
         if (audioManager != null)
         {
             audioManager.PlaySfx(
