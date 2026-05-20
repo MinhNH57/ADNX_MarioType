@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -16,7 +17,6 @@ public class PlayerDataManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-
             filePath = Path.Combine(Application.persistentDataPath, "players.json");
 
             LoadData();

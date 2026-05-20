@@ -7017,7 +7017,7 @@ MonoBehaviour:
     Prefabs:
       NetworkPrefabsLists:
       - {fileID: 11400000, guid: 63e8a168f21d6f044bc9287cbfdd6782, type: 2}
-    TickRate: 30
+    TickRate: 60
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 0
     ConnectionData: 
@@ -7460,6 +7460,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 5052716504604306774, guid: ad9247764abd2e941804cd37592f47d4, type: 3}
+      propertyPath: gameOverObject
+      value: 
+      objectReference: {fileID: 1624932395}
     - target: {fileID: 5052716504604306774, guid: ad9247764abd2e941804cd37592f47d4, type: 3}
       propertyPath: _gameOverObject
       value: 

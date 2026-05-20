@@ -22,7 +22,7 @@ public class NextLevel : NetworkBehaviour
 
         _isLoading = true;
         _audioManager.PlaySfx(_audioManager.winClip);
-        StartCoroutine(NotifyServer());
+        StartCoroutine(NotifyServer ());
     }
 
     IEnumerator NotifyServer()

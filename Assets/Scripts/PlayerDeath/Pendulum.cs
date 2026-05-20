@@ -113,8 +113,6 @@ public class Pendulum : NetworkBehaviour
     private void ShowGameOverClientRpc(
         ClientRpcParams rpcParams = default)
     {
-        // Chỉ owner local mới hiện UI
-        if (!IsOwner) return;
 
         if (audioManager != null)
         {
